@@ -764,9 +764,10 @@ header{
     bottom: 0;
 }
 .tip-box > .arrowBtn{
-    width: 1550px;
+    width: 110%;
     left: 50%;
     top: 300px;
+    z-index: 600;
     transform: translateX(-50%);
 }
 .tips{
