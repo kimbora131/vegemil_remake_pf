@@ -634,7 +634,7 @@ header{
 /* ****************베스트 리뷰 */
 .best-review{
     position: relative;
-    width: 95%;
+    width: 1280px;
     height: 900px;
     margin: 0 auto;
     margin-top: 120px;
@@ -728,11 +728,10 @@ header{
 
 .parenting{
     position: relative;
-    width: 95%;
+    width: 1280px;
     height: 900px;
     margin: 0 auto;
     margin-top: 100px;
-    
 }
 .parenting-box{
     position: absolute;
@@ -760,31 +759,28 @@ header{
 .tip-box{
     position: relative;
     position: absolute;
-    width: 100%;
+    width: 1280px;
     height: 90%;
     bottom: 0;
-    
 }
 .tip-box > .arrowBtn{
-    width: 100%;
-    z-index: 600;
+    width: 1550px;
     left: 50%;
     top: 300px;
     transform: translateX(-50%);
 }
 .tips{
+    position: relative;
     position: absolute;
-    width: 80%;
+    width: 100%;
     height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .tip{
     position: relative;
     position: absolute;
-    width: 350px;
-    height: 600px;
+    width: 450px;
+    height: 700px;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
@@ -792,7 +788,7 @@ header{
 }
 .tip > img{
     position: absolute;
-    height: 60%;
+    height: 450px;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -802,7 +798,7 @@ header{
     font-family: 'SCDream';
     font-size: 22px;
     font-weight: 600;
-    bottom: 20%;
+    bottom: 160px;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -813,7 +809,7 @@ header{
     left: 50%;
     transform: translateX(-50%);
     font-family: 'bazzi';
-    font-size: 2em;
+    font-size: 45px;
     text-align: center;
 }
 
@@ -835,22 +831,22 @@ header{
 }
 
 .tip:first-child{
-    left: 0 !important;
+    left: 0;
     z-index: 500;
     box-shadow: 2px 2px 6px rgba(0, 0, 0,0.5);
 }
 .tip:nth-child(2){
-    left: 25%;
+    left: 300px;
     transform: scale(75%) rotate(-10deg)translateY(20px);
     z-index: 475;
 }
 .tip:nth-child(3){
-    right: 22%;
-    transform: scale(75%) rotate(4deg) translateY(30px);
+    left: 570px;
+    transform: scale(75%) rotate(4deg) translateY(-10px);
     z-index: 450;
 }
 .tip:nth-child(4){
-    right: 0%;
+    left: 850px;
     transform: scale(75%) rotate(-5deg) translateY(15px);
     z-index: 425;
 }
