@@ -634,7 +634,7 @@ header{
 /* ****************베스트 리뷰 */
 .best-review{
     position: relative;
-    width: 1280px;
+    width: 95%;
     height: 900px;
     margin: 0 auto;
     margin-top: 120px;
@@ -728,10 +728,11 @@ header{
 
 .parenting{
     position: relative;
-    width: 1280px;
+    width: 95%;
     height: 900px;
     margin: 0 auto;
     margin-top: 100px;
+    
 }
 .parenting-box{
     position: absolute;
@@ -759,12 +760,14 @@ header{
 .tip-box{
     position: relative;
     position: absolute;
-    width: 1280px;
+    width: 100%;
     height: 90%;
     bottom: 0;
+    
 }
 .tip-box > .arrowBtn{
-    width: 1550px;
+    width: 100%;
+    z-index: 600;
     left: 50%;
     top: 300px;
     transform: translateX(-50%);
@@ -774,6 +777,8 @@ header{
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .tip{
@@ -785,6 +790,7 @@ header{
     overflow: hidden;
     box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
     cursor: pointer;
+    margin-left: 5%;
 }
 .tip > img{
     position: absolute;
