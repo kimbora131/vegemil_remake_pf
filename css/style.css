@@ -1,0 +1,993 @@
+body,header,section,footer,div,p,a,h1,h2,h3,h4,h5,h6,ul,ol,li,span{margin: 0;padding: 0;}
+a{text-decoration: none; color: inherit;}
+li{list-style: none;}
+
+body{background-color: rgb(255, 245, 213);}
+
+/* 본문 시작 */
+
+/* ********************헤더********************** */
+header{
+    width: 98%;
+    height: 93px;
+    background-color: #fff;
+    margin: 20px auto;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1500;
+}
+.header1{
+    position: absolute;
+    width: 65%;
+    height: 100%;
+    left: 0;
+    justify-content: space-between;
+    padding-top: 35px;
+    display: flex;
+    z-index: 100;
+}
+.logo{
+    margin: 0 3%;
+}
+.h_item{
+    display: inline-block;
+    font-size: 23px;
+    transform: translateY(-5px);
+    margin-right: 5%;
+    position: relative;
+    cursor: pointer;
+    z-index: 110;
+}
+.h_item:hover > div{
+    display: block;
+}
+.h_item:hover::before{
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: -3px;
+    padding: 15px 15px;
+    background-color: rgb(255, 193, 118);
+    border-radius: 15px;
+    z-index: -1;
+}
+.h_item > div{
+    display: none;
+    position: absolute;
+    top: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #555;
+}
+.itemList > li{
+    width: 160px;
+    margin: 15px 20px;
+    padding: 5px 5px;
+    font-family: "SCDream", sans-serif;
+    font-weight: 300;
+}
+.itemList > li:hover{
+    background-color: rgb(255, 245, 224);
+    cursor: pointer;
+}
+
+
+.header2{
+    position: relative;
+    position: absolute;
+    width: 35%;
+    height: 100%;
+    right: 0;
+    background-color: rgb(209, 229, 240);
+    z-index: 90;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+.header2 > div{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 20px 20px;
+    color: #333;
+    cursor: pointer;
+}
+.header2 > div > img{
+    width: 90%;
+    height: 90%;
+    padding-left: 4px;
+    object-fit: contain;
+}
+.h_join > img{
+    padding-left: 2px !important;
+}
+.header2 > .h_etc{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px;
+    display: flex !important;
+}
+.h_etc > div {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.h_etc > div > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.h_etc > div > .colorBox{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    z-index: -2;
+}
+.h_etc > div > .colorBox-over{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50px;
+    background-color: rgb(255, 227, 143);
+    z-index: -1;
+    animation: colorBoxOut 0.6s forwards;
+}
+.h_etc > div:hover .colorBox-over{
+    animation: colorBoxUp 0.6s forwards;
+}
+
+
+/* ************************ 섹션1 ************************* */
+
+.section1{
+    width: 100%;
+    height: 1000px;
+    background-color: rgb(255, 225, 128);
+}
+.section1-1{
+    margin: 0 auto;
+    width: 1100px;
+    height: 550px;
+    padding-top: 250px;
+    display: flex;
+}
+.section1-1 .content{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    font-family: 'SCDream';
+}
+.section1-1 .title{
+    font-size: 50px;
+    font-weight: 200;
+    line-height: 1.6;
+    margin-bottom: 60px;
+}
+.s1_Sld1{
+    position: relative;
+    font-size: 55px;
+    font-weight: 200;
+    line-height: 1.4;
+}
+.s1_Sld1 > div{
+    position: absolute;
+    opacity: 0;
+}
+.s1_Sld1 > div:first-child{
+    opacity: 1;
+    animation: topToBot 1s;
+}
+.s1_Sld1 > div > span{
+    color: #fff;
+    padding: 4px 8px;
+    font-weight: 500;
+}
+.slide1 > span{background-color: rgb(98, 211, 255);}
+.slide2 > span{background-color: rgb(255, 141, 11);}
+.slide3 > span{background-color: rgb(154, 224, 175);}
+.subTitle{
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-left: 20px;
+    margin-bottom: 18px;
+}
+.subTitle > img{
+    position: absolute;
+    margin-left: -15px;
+    z-index: 1;
+}
+.subTitle > p{
+    position: absolute;
+    z-index: 2;
+}
+.subTitle > p > span{
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1.8;
+    z-index: 2;
+}
+.sampleBtn{
+    position: absolute;
+    background-color: #fff;
+    width: 350px;
+    height: 90px;
+    margin-left: 20px;
+    border-radius: 25px;
+    bottom: 0;
+}
+.sampleBtn > p{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.s1_Sld2{
+    width: 50%;
+    height: 100%;
+}
+.slide{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.Sld2_item {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* opacity: 0; */
+    animation: slideMoveOut 1s forwards;
+}
+.Sld2_item.active{
+    /* opacity: 1; */
+    animation: slideMoveIn 1s forwards;
+}
+.dots-Box{
+    width: 600px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+.dot{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(221, 189, 85);
+    border-radius: 15px;
+    top: 50%;
+    margin: 5px 3px;
+}
+.dot.active{background-color: #fff;}
+
+
+
+/* ************************ 섹션2 ************************* */
+
+.section2{
+    position: relative;
+    width: 100%px;
+    height: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* ************************원 슬라이드 버튼 */
+.arrowBtn{
+    position: absolute;
+    top: 500px;
+    width: 95%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 120;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.arrowBtn > div{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 50px;
+    opacity: 0.6;
+}
+.leftBtn:hover{opacity: 1;}
+.rightBtn:hover{opacity: 1;}
+.arrowBtn > div > .arrow{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    top: 50%;
+    left: 50%;
+    transform: translate(-30%, -50%) rotate(-45deg);
+}
+.rightBtn .arrow{
+    transform: translate(-70%, -50%) rotate(135deg) !important;
+}
+
+
+/* ************************원 슬라이드 타이틀 */
+.section2 .content{
+    position: relative;
+    position: absolute;
+    width: 550px;
+    height: 180px;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 120;
+}
+.section2 .content .title{
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.titleItem{
+    font-family: 'SCDream';
+    font-weight: 400;
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    line-height: 1.3;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+.titleItem:first-child::after{
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 15px;
+    background-color: rgb(255, 176, 176);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: -1;
+}
+.titleItem:nth-child(2)::after{
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 15px;
+    background-color: rgb(138, 223, 197);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: -1;
+}
+.titleItem:nth-child(3)::after{
+    position: absolute;
+    content: '';
+    width: 120%;
+    height: 15px;
+    background-color: rgb(138, 158, 212);
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: -1;
+}
+.titleItem span{
+    font-weight: 600;
+    font-size: 55px;
+}
+.titleItem:first-child{
+    opacity: 1;
+}
+
+/* ************************원 슬라이드 커버 이미지들 */
+.cover{
+    position: relative;
+    position: absolute;
+    width: 1920px;
+    height: 100%;
+    font-size: 0;
+    z-index: 100;
+    pointer-events: none;
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cover .milk1{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.cover .bean1{
+    position: absolute;
+    top: 700px;
+    left: 150px;
+    transform: scale(120%);
+    animation: bean1 2.5s infinite;
+}
+.cover .bean2{
+    position: absolute;
+    top: 600px;
+    right: 100px;
+    animation: bean2 2.2s infinite;
+}
+.cover .bean3{
+    position: absolute;
+    bottom: 150px;
+    left: 300px;
+    animation: bean3 2.1s infinite;
+}
+.cover .bean4{
+    position: absolute;
+    bottom: 0;
+    left: 300px;
+}
+
+
+
+
+
+/* ************************원 슬라이드 박스 */
+.s2_Sld2{
+    position: relative;
+    position: absolute;
+    width: 1800px;
+    height: 100%;
+    top: 343px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+/* ************************원 슬라이드 1 */
+.s2_Sld2 .circle1{
+    position: relative;
+    position: absolute;
+    width: 1430px;
+    height: 643px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.s2_Sld2 .circle1 > p{
+    position: absolute;
+    font-size: 23px;
+    font-family: 'SCDream';
+    font-weight: 300;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.5;
+}
+.s2_Sld2 .circle1 > p > span{
+    font-weight: 500;
+}
+.s2_Sld2 .circle1 .btn_C1{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ************************원 슬라이드 2 */
+.s2_Sld2 .circle2{
+    position: relative;
+    position: absolute;
+    width: 1430px;
+    height: 643px;
+    transform: rotate(120deg);
+    top: 752px;
+    right: -248px;
+}
+.s2_Sld2 .circle2 > p{
+    position: absolute;
+    font-size: 23px;
+    font-family: 'SCDream';
+    font-weight: 300;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.5;
+}
+.s2_Sld2 .circle2 > p > span{
+    font-weight: 500;
+}
+.s2_Sld2 .circle2 .btn_C2{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ************************원 슬라이드 3 */
+.s2_Sld2 .circle3{
+    position: relative;
+    position: absolute;
+    width: 1430px;
+    height: 643px;
+    transform: rotate(-120deg);
+    top: 752px;
+    left: -250px;
+}
+.s2_Sld2 .circle3 > p{
+    position: absolute;
+    font-size: 23px;
+    font-family: 'SCDream';
+    font-weight: 300;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 1.5;
+}
+.s2_Sld2 .circle3 > p > span{
+    font-weight: 500;
+}
+.s2_Sld2 .circle3 .btn_C3{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    line-height: 2;
+    border: 1px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ************************원 슬라이드 뒷배경 */
+.back{
+    position: relative;
+    position: absolute;
+    width: 100%;
+}
+.back .botBeans{
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translateX(-50%) rotate(10deg);
+}
+.back .milk2{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+/* ************************ 섹션3 ************************* */
+
+.section3{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(106, 136, 182);
+}
+.goto{
+    font-family: 'Bazzi';
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+.goto > div{
+    margin: 30px;
+    width: 500px;
+    height: 150px;
+    text-align: center;
+    line-height: 1.8;
+}
+.reEvent::before{
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.7);
+    right: 50%
+}
+.goto > div > p {
+    margin-bottom: 35px;
+}
+.goto > div > a {
+    font-family: 'SCDream';
+    font-size: 20px;
+    border: 1px solid#fff;
+    padding: 20px 40px;
+}
+
+
+
+
+/* ************************ 섹션4************************* */
+
+.section4{
+    width: 100%;
+    height: 2000px;
+}
+
+/* ****************베스트 리뷰 */
+.best-review{
+    position: relative;
+    width: 1280px;
+    height: 900px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.best-box{
+    position: absolute;
+    width: 230px;
+    height: 60px;
+    background-color: rgb(255, 159, 159);
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 2px 2px 4px #777;
+}
+.best-box > p{
+    position: absolute;
+    font-family: 'SCDream';
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(199, 79, 79);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.best-box > p > span{color: #fff; font-weight: 400;}
+
+.thanks{
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    bottom: 0;
+}
+.photos{
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+.photo{
+    position: relative;
+    overflow: hidden;
+}
+.photo > img{
+    position: absolute;
+    height: 100%;
+    overflow: hidden;
+}
+.photo > .review{
+    position: absolute;
+    width: 100%;
+    height: 90px;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-family: 'SCDream';
+    font-weight: 300;
+}
+.review > p{
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.thanksText{
+    position: relative;
+    position: absolute;
+    right: 0;
+    width: 45%;
+    height: 100%;
+}
+.thanksText > p{
+    position: absolute;
+    font-size: 100px;
+    font-family: 'SCDream';
+    font-weight: 700;
+    margin-left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.thanksText > img {
+    position: absolute;
+    bottom: 10px;
+    right: 100px;
+    transform: scale(130%);
+    cursor: pointer;
+}
+
+/* ****************육아 꿀팁 대방출 */
+
+.parenting{
+    position: relative;
+    width: 1280px;
+    height: 900px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.parenting-box{
+    position: absolute;
+    top: 0;
+    width: 230px;
+    height: 60px;
+    background-color: rgb(255, 214, 125);
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 2px 2px 4px #777;
+}
+.parenting-box > p{
+    position: absolute;
+    font-family: 'SCDream';
+    font-size: 22px;
+    font-weight: 700;
+    color: rgb(235, 136, 55);
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.parenting-box > p > span{color: #fff; font-weight: 400;}
+
+.tip-box{
+    position: relative;
+    position: absolute;
+    width: 1280px;
+    height: 90%;
+    bottom: 0;
+}
+.tip-box > .arrowBtn{
+    width: 1550px;
+    left: 50%;
+    top: 300px;
+    transform: translateX(-50%);
+}
+.tips{
+    position: relative;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.tip{
+    position: relative;
+    position: absolute;
+    width: 450px;
+    height: 700px;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
+    cursor: pointer;
+}
+.tip > img{
+    position: absolute;
+    height: 450px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tip > p:nth-child(2){
+    position: absolute;
+    font-family: 'SCDream';
+    font-size: 22px;
+    font-weight: 600;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.tip > p:nth-child(3){
+    position: absolute;
+    width: 80%;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'bazzi';
+    font-size: 45px;
+    text-align: center;
+}
+
+.tip-1 > p:nth-child(2){
+    background-color: rgb(139, 209, 209);
+    padding: 5px 10px;
+}
+.tip-2 > p:nth-child(2){
+    background-color: rgb(252, 193, 137);
+    padding: 5px 10px;
+}
+.tip-3 > p:nth-child(2){
+    background-color: rgb(231, 159, 168);
+    padding: 5px 10px;
+}
+.tip-4 > p:nth-child(2){
+    background-color: rgb(161, 189, 240);
+    padding: 5px 10px;
+}
+
+.tip:first-child{
+    left: 0;
+    z-index: 500;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0,0.5);
+}
+.tip:nth-child(2){
+    left: 300px;
+    transform: scale(75%) rotate(-10deg)translateY(20px);
+    z-index: 475;
+}
+.tip:nth-child(3){
+    left: 570px;
+    transform: scale(75%) rotate(4deg) translateY(-10px);
+    z-index: 450;
+}
+.tip:nth-child(4){
+    left: 850px;
+    transform: scale(75%) rotate(-5deg) translateY(15px);
+    z-index: 425;
+}
+
+.tip-more {
+    position: absolute;
+    bottom: 100px;
+    right: 5%;
+    transform: scale(100%);
+}
+
+
+/* ******************푸터 */
+
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(150, 192, 186);
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+footer > img{
+    width: 91px;
+    height: 54px;
+    transform: translateY(13px) scale(120%);
+    margin: 0 60px;
+}
+footer > p {
+    margin: 0 1%;
+    font-family: 'SCDream';
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+footer > p:nth-child(3){
+    transform: translateY(-10px);
+}
+footer > p:nth-child(3) >span{
+    font-size: 20px;
+    font-weight: 500;
+}
+.familySite{
+    margin: 0 30px;
+    background-color: #fff;
+    width: 210px;
+    height: 40px;
+    text-align: center;
+    padding-top: 20px;
+    border: 1px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.familySite > img{
+    transform: translateY(2px) scale(95%);
+}
+
+/* ************************ 애니메이션 목록 ************************* */
+
+@keyframes colorBoxUp{
+    0%{top: 50px;}
+    50%{top: 0;}
+    60%{top: 10px;}
+    75%{top: 0px;}
+    90%{top: 5px;}
+    100%{top: 0;}
+}
+@keyframes colorBoxOut{
+    0%{top: 0;}
+    100%{top: 50px;}
+}
+
+@keyframes topToBot{
+    0%{top: -30px; opacity: 0;}
+    100%{top: 0; opacity: 1;}
+}
+
+@keyframes slideMoveIn{
+    0%{transform: translateX(50%);}
+    100%{transform: translateX(-50%);}
+}
+@keyframes slideMoveOut{
+    0%{transform: translateX(-50%);}
+    100%{transform: translateX(-150%);}
+}
+
+@keyframes photpUp{
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-10%);}
+}
+
+/* 콩 움직임 */
+@keyframes bean1{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(35deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes bean2{
+    0%{transform: rotate(70deg);}
+    50%{transform: rotate(35deg);}
+    100%{transform: rotate(70deg);}
+    
+}
+@keyframes bean3{
+    0%{transform: translateY(0);}
+    50%{transform: translateY(-30%);}
+    100%{transform: translateY(0);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **************************************** 적용한 폰트 font *************************************** */
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); font-weight: 100; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: 200; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: 300; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff'); font-weight: 400; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: 500; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: 600; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff'); font-weight: 700; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: 800; }
+@font-face { font-family: 'SCDream'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff'); font-weight: 900; }
+@font-face {
+    font-family: 'Bazzi';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/Bazzi.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
