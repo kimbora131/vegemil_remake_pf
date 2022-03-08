@@ -773,9 +773,8 @@ header{
     transform: translateX(-50%);
 }
 .tips{
-    position: relative;
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -784,17 +783,16 @@ header{
 .tip{
     position: relative;
     position: absolute;
-    width: 450px;
-    height: 700px;
+    width: 350px;
+    height: 600px;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
     cursor: pointer;
-    margin-left: 5%;
 }
 .tip > img{
     position: absolute;
-    height: 450px;
+    height: 60%;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -804,7 +802,7 @@ header{
     font-family: 'SCDream';
     font-size: 22px;
     font-weight: 600;
-    bottom: 160px;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -815,7 +813,7 @@ header{
     left: 50%;
     transform: translateX(-50%);
     font-family: 'bazzi';
-    font-size: 45px;
+    font-size: 2em;
     text-align: center;
 }
 
@@ -837,22 +835,22 @@ header{
 }
 
 .tip:first-child{
-    left: 0;
+    left: 0 !important;
     z-index: 500;
     box-shadow: 2px 2px 6px rgba(0, 0, 0,0.5);
 }
 .tip:nth-child(2){
-    left: 300px;
+    left: 25%;
     transform: scale(75%) rotate(-10deg)translateY(20px);
     z-index: 475;
 }
 .tip:nth-child(3){
-    left: 570px;
-    transform: scale(75%) rotate(4deg) translateY(-10px);
+    right: 22%;
+    transform: scale(75%) rotate(4deg) translateY(30px);
     z-index: 450;
 }
 .tip:nth-child(4){
-    left: 850px;
+    right: 0%;
     transform: scale(75%) rotate(-5deg) translateY(15px);
     z-index: 425;
 }
