@@ -40,10 +40,19 @@ $(function(){
     })
 
 
-    $(window).on('scroll', function(){
+    $(window).scroll(function(){
         let top = $(this).scrollTop()
+        console.log(top)
         if (top>300){
-            $('.section2 .content .title').css('animation', 'titleDown 1s both ease-in-out');
+            $('.section2 .content .title').css('animation', 'titleDown 1s both ease-out');
+        }else{
+            $('.section2 .content .title').css('animation', 'titleUp 1s both ease-out');
+        }
+
+        if(top>1850){
+            $('.photo').addClass('photoSlide')
+        }else{
+            $('.photo').removeClass('photoSlide')
         }
     })
     
