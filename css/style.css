@@ -19,7 +19,7 @@ header{
 }
 .header1{
     position: absolute;
-    width: 65%;
+    width: 60%;
     height: 100%;
     left: 0;
     justify-content: space-between;
@@ -32,7 +32,7 @@ header{
 }
 .h_item{
     display: inline-block;
-    font-size: 23px;
+    font-size: 20px;
     transform: translateY(-5px);
     margin-right: 5%;
     position: relative;
@@ -72,65 +72,74 @@ header{
     cursor: pointer;
 }
 
-
+/* ************************헤더2********************** */
 .header2{
     position: relative;
     position: absolute;
-    width: 35%;
+    width: 40%;
     height: 100%;
     right: 0;
     background-color: rgb(209, 229, 240);
     z-index: 90;
-    padding: 0 30px;
+
     box-sizing: border-box;
 }
-.header2 > div{
+/* .header2 > div{
     display: inline-block;
     width: 30px;
     height: 30px;
     margin: 20px 20px;
     color: #333;
     cursor: pointer;
-}
-.header2 > div > img{
+} */
+/* .header2 > div > img{
     width: 90%;
     height: 90%;
     padding-left: 4px;
     object-fit: contain;
-}
-.h_join > img{
-    padding-left: 2px !important;
-}
-.header2 > .h_etc{
+} */
+.h2_menu{
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 360px;
-    display: flex !important;
+    width: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-around;
 }
-.h_etc > div {
+.h2_menu > div > img {display: block; margin: 0 auto;}
+
+.header2 > .h2_etc{
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    display: flex !important;
+    
+}
+.h2_etc > div {
     position: relative;
-    width: 50px;
-    height: 50px;
+    width: 2.5rem;
+    height: 2.5rem;
     margin: 0 auto;
-    border-radius: 25px;
+    border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
 }
-.h_etc > div > img {
+.h2_etc > div > img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
-.h_etc > div > .colorBox{
+.h2_etc > div > .colorBox{
     position: absolute;
     width: 50px;
     height: 50px;
     background-color: #fff;
     z-index: -2;
 }
-.h_etc > div > .colorBox-over{
+.h2_etc > div > .colorBox-over{
     position: absolute;
     width: 50px;
     height: 50px;
@@ -139,7 +148,7 @@ header{
     z-index: -1;
     animation: colorBoxOut 0.6s forwards;
 }
-.h_etc > div:hover .colorBox-over{
+.h2_etc > div:hover .colorBox-over{
     animation: colorBoxUp 0.6s forwards;
 }
 
@@ -634,7 +643,7 @@ header{
 /* ****************베스트 리뷰 */
 .best-review{
     position: relative;
-    width: 1280px;
+    width: 100vw;
     height: 900px;
     margin: 0 auto;
     margin-top: 120px;
@@ -682,7 +691,7 @@ header{
 }
 .photo > img{
     position: absolute;
-    height: 100%;
+    background-size: contain;
     overflow: hidden;
 }
 .photo > .review{
@@ -728,7 +737,7 @@ header{
 
 .parenting{
     position: relative;
-    width: 1280px;
+    width: 100%;
     height: 900px;
     margin: 0 auto;
     margin-top: 100px;
@@ -759,12 +768,12 @@ header{
 .tip-box{
     position: relative;
     position: absolute;
-    width: 1280px;
+    width: 100vw;
     height: 90%;
     bottom: 0;
 }
 .tip-box > .arrowBtn{
-    width: 110%;
+    width: 100%;
     left: 50%;
     top: 300px;
     z-index: 600;
@@ -773,14 +782,15 @@ header{
 .tips{
     position: relative;
     position: absolute;
-    width: 100%;
+    width: 70%;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .tip{
     position: relative;
     position: absolute;
-    width: 450px;
+    width: 25rem;
     height: 700px;
     background-color: #fff;
     overflow: hidden;
