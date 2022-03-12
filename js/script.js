@@ -38,4 +38,15 @@ $(function(){
         index = n
         active(index)
     })
+
+
+    $(window).on('scroll', function(){
+        let top = $(this).scrollTop()
+        if (top>300){
+            $('.section2 .content .title').css('animation', 'titleDown 1s both ease-in-out');
+        }
+    })
+    
+
+
 })
