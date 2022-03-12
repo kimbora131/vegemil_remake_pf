@@ -749,7 +749,6 @@ header{
     position: absolute;
     bottom: 10px;
     right: 100px;
-    transform: scale(130%);
     cursor: pointer;
 }
 
