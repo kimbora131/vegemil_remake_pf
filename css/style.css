@@ -773,7 +773,11 @@ header{
     bottom: 0;
 }
 .tip-box > .arrowBtn{
+<<<<<<< HEAD
     width: 100%;
+=======
+    width: 120%;
+>>>>>>> 304a7c7179228a39e254c404dc73c7457a32f7dd
     left: 50%;
     top: 300px;
     z-index: 600;
