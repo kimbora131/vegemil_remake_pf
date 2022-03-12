@@ -105,17 +105,18 @@ header{
     transform: translateY(-50%);
     display: flex;
     justify-content: space-around;
+    padding-left: 1rem;
 }
 .h2_menu > div > img {display: block; margin: 0 auto;}
 
 .header2 > .h2_etc{
     position: absolute;
-    width: 60%;
+    width: 55%;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
     display: flex !important;
-    
+    padding-right: 1rem;
 }
 .h2_etc > div {
     position: relative;
@@ -178,6 +179,7 @@ header{
     font-weight: 200;
     line-height: 1.6;
     margin-bottom: 60px;
+    animation: titleAni 1s ease-in-out;
 }
 .s1_Sld1{
     position: relative;
@@ -207,6 +209,7 @@ header{
     font-weight: 300;
     margin-left: 20px;
     margin-bottom: 18px;
+    animation: titleAni 1s 0.2s both ease-in-out;
 }
 .subTitle > img{
     position: absolute;
@@ -231,6 +234,7 @@ header{
     margin-left: 20px;
     border-radius: 25px;
     bottom: 0;
+    animation: titleAni 1s 0.4s both ease-in-out;
 }
 .sampleBtn > p{
     font-size: 25px;
@@ -275,6 +279,19 @@ header{
     margin: 5px 3px;
 }
 .dot.active{background-color: #fff;}
+
+
+@keyframes titleAni{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
 
 
 
@@ -643,23 +660,25 @@ header{
 /* ****************베스트 리뷰 */
 .best-review{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 900px;
-    margin: 0 auto;
     margin-top: 120px;
 }
 .best-box{
-    position: absolute;
-    width: 230px;
-    height: 60px;
+    display: block;
+    position: relative;
+    width: 330px;
+    height: 100px;
     background-color: rgb(255, 159, 159);
-    border-radius: 30px 30px 30px 0;
+    border-radius: 5rem 5rem 5rem 0;
     box-shadow: 2px 2px 4px #777;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .best-box > p{
     position: absolute;
     font-family: 'SCDream';
-    font-size: 22px;
+    font-size: 2rem;
     font-weight: 700;
     color: rgb(199, 79, 79);
     text-align: center;
@@ -670,10 +689,11 @@ header{
 .best-box > p > span{color: #fff; font-weight: 400;}
 
 .thanks{
+    display: block;
     position: relative;
-    position: absolute;
-    width: 100%;
+    width: 1280px;
     height: 90%;
+    margin: 0 auto;
     bottom: 0;
 }
 .photos{
@@ -740,21 +760,24 @@ header{
     width: 100%;
     height: 900px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 150px;
+    /* background-color: aqua; */
 }
 .parenting-box{
-    position: absolute;
-    top: 0;
-    width: 230px;
-    height: 60px;
+    display: block;
+    position: relative;
+    width: 330px;
+    height: 100px;
     background-color: rgb(255, 214, 125);
-    border-radius: 30px 30px 30px 0;
+    border-radius: 5rem 5rem 5rem 0;
     box-shadow: 2px 2px 4px #777;
+    margin: 0 auto;
+    margin-bottom: 30px;
 }
 .parenting-box > p{
     position: absolute;
     font-family: 'SCDream';
-    font-size: 22px;
+    font-size: 2rem;
     font-weight: 700;
     color: rgb(235, 136, 55);
     text-align: center;
@@ -767,17 +790,13 @@ header{
 
 .tip-box{
     position: relative;
-    position: absolute;
-    width: 100vw;
+    width: 1280px;
     height: 90%;
+    margin: 0 auto;
     bottom: 0;
 }
 .tip-box > .arrowBtn{
-<<<<<<< HEAD
     width: 100%;
-=======
-    width: 120%;
->>>>>>> 304a7c7179228a39e254c404dc73c7457a32f7dd
     left: 50%;
     top: 300px;
     z-index: 600;
@@ -785,10 +804,10 @@ header{
 }
 .tips{
     position: relative;
-    position: absolute;
-    width: 70%;
+    width: 80%;
     height: 100%;
     box-sizing: border-box;
+    margin: 0 auto;
 }
 
 .tip{
@@ -851,26 +870,25 @@ header{
     box-shadow: 2px 2px 6px rgba(0, 0, 0,0.5);
 }
 .tip:nth-child(2){
-    left: 300px;
+    right: 30%;
     transform: scale(75%) rotate(-10deg)translateY(20px);
     z-index: 475;
 }
 .tip:nth-child(3){
-    left: 570px;
+    right: 15%;
     transform: scale(75%) rotate(4deg) translateY(-10px);
     z-index: 450;
 }
 .tip:nth-child(4){
-    left: 850px;
+    right: 0;
     transform: scale(75%) rotate(-5deg) translateY(15px);
     z-index: 425;
 }
 
 .tip-more {
     position: absolute;
-    bottom: 100px;
-    right: 5%;
-    transform: scale(100%);
+    bottom: 50px;
+    right: 0;
 }
 
 
