@@ -55,7 +55,32 @@ $(function(){
             $('.photo').removeClass('photoSlide')
         }
     })
-    
+
+    let rotate = 0
+
+    function rotateCircle(){
+
+        let currentRotate = 0
+
+        if(rotate > 0){
+            $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
+        }else{
+            $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
+        }
+
+    }
+
+    $('.arrowBtn .leftBtn').on('click', function(){
+        rotate++
+        rotateCircle()
+        rotate = 0
+    });
+
+    $('.arrowBtn .rightBtn').on('click', function(){
+        rotate--
+        rotateCircle()
+        rotate = 0
+    });
 
 
 })
