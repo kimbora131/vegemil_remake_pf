@@ -42,7 +42,7 @@ $(function(){
 
     $(window).scroll(function(){
         let top = $(this).scrollTop()
-        console.log(top)
+        
         if (top>300){
             $('.section2 .content .title').css('animation', 'titleDown 1s both ease-out');
         }else{
@@ -85,8 +85,8 @@ $(function(){
 
         if(titleNum == titleItemMax) titleNum = 0
         if(titleNum == -1) titleNum = titleItemMax-1
-        titleItem.removeClass('active')
-        titleItem.eq(titleNum).addClass('active')
+        titleItem.stop().fadeOut(500).removeClass('active')
+        titleItem.eq(titleNum).stop().fadeIn(500).addClass('active')
 
         console.log(titleNum)
     }
