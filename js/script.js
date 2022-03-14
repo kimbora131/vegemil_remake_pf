@@ -56,31 +56,71 @@ $(function(){
         }
     })
 
+
+
+    //***********************섹션2 원형 슬라이드
+
     let rotate = 0
+    let currentRotate = 0
 
     function rotateCircle(){
 
-        let currentRotate = 0
-
         if(rotate > 0){
+            currentRotate += 120
             $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
         }else{
+            currentRotate -= 120
             $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
         }
 
     }
 
+    //원형슬라이드의 제목
+    let titleItem = $('.titleItem');
+    let titleItemMax = titleItem.length;
+
+    let titleNum = 0
+
+    function addACtive(){
+
+        if(titleNum == titleItemMax) titleNum = 0
+        if(titleNum == -1) titleNum = titleItemMax-1
+        titleItem.removeClass('active')
+        titleItem.eq(titleNum).addClass('active')
+
+        console.log(titleNum)
+    }
+    addACtive()
+
+
+
+    //왼쪽 버튼 클릭
     $('.arrowBtn .leftBtn').on('click', function(){
         rotate++
-        rotateCircle()
+        rotateCircle()          //원형슬라이드 회전(시계방향)
         rotate = 0
-    });
 
+        titleNum--
+        addACtive()
+        
+    });
+    //오른쪽 버튼 클릭
     $('.arrowBtn .rightBtn').on('click', function(){
         rotate--
-        rotateCircle()
+        rotateCircle()          //원형슬라이드 회전(반시계방향)
         rotate = 0
+
+        titleNum++
+        addACtive()
+        
     });
+
+    
+    
+
+
+
+
 
 
 })
