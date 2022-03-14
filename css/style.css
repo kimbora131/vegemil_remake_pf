@@ -308,7 +308,7 @@ header{
 .section2{
     position: relative;
     width: 100%;
-    height: 1200px;
+    height: 1080px;
     margin: 0 auto;
     overflow: hidden;
     
@@ -357,7 +357,7 @@ header{
     position: absolute;
     width: 550px;
     height: 180px;
-    top: 50px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 120;
@@ -396,7 +396,7 @@ header{
 
 .titleItem{
     font-family: 'SCDream';
-    font-weight: 400;
+    font-weight: 600;
     position: absolute;
     width: 100vh;
     font-size: 40px;
@@ -411,7 +411,7 @@ header{
 .titleItem:first-child::after{
     position: absolute;
     content: '';
-    width: 70%;
+    width: 600px;
     height: 15px;
     background-color: rgb(255, 176, 176);
     left: 50%;
@@ -421,7 +421,7 @@ header{
 .titleItem:nth-child(2)::after{
     position: absolute;
     content: '';
-    width: 76%;
+    width: 650px;
     height: 15px;
     background-color: rgb(138, 223, 197);
     left: 50%;
@@ -431,7 +431,7 @@ header{
 .titleItem:nth-child(3)::after{
     position: absolute;
     content: '';
-    width: 82%;
+    width: 700px;
     height: 15px;
     background-color: rgb(138, 158, 212);
     left: 50%;
@@ -440,7 +440,7 @@ header{
 }
 .titleItem span{
     font-weight: 600;
-    font-size: 5rem;
+    font-size: 4rem;
 }
 .titleItem.active{
     display: block;
@@ -499,7 +499,7 @@ header{
 .s2_Sld2{
     position: relative;
     position: absolute;
-    top: 668px;
+    top: 548px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 50;
@@ -653,7 +653,7 @@ header{
     width: 100%;
     height: 200px;
     background-color: rgb(106, 136, 182);
-    background: url(../img/bg_wall2.jpg) fixed;
+    background: url(../img/bg_wall2-1.jpg) fixed;
 }
 .goto{
     font-family: 'Bazzi';
@@ -698,7 +698,7 @@ header{
 
 .section4{
     width: 100%;
-    height: 2050px;
+    height: 2000px;
 }
 
 /* ****************베스트 리뷰 */
@@ -707,6 +707,7 @@ header{
     width: 100%;
     height: 900px;
     margin-top: 120px;
+    margin-bottom: 150px;
 }
 .best-box{
     display: block;
@@ -735,9 +736,11 @@ header{
 .thanks{
     display: block;
     position: relative;
+    position: absolute;
     width: 1100px;
-    height: 90%;
-    margin: 0 auto;
+    height: 85%;
+    left: 50%;
+    transform: translateX(-50%);
     bottom: 0;
     
 }
@@ -758,10 +761,10 @@ header{
 }
 .photo > img{
     position: absolute;
-    background-size: contain;
+    height: 100%;
     overflow: hidden;
     left: 50%;
-    transform: translateX(-45%);
+    transform: translateX(-50%);
 }
 .photo > .review{
     position: absolute;
@@ -797,10 +800,11 @@ header{
 }
 .thanksText > p{
     position: absolute;
-    font-size: 7rem;
+    font-size: 6rem;
     font-family: 'SCDream';
     font-weight: 700;
     margin-left: 1.5rem;
+    line-height: 1.5em;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -816,10 +820,8 @@ header{
 .parenting{
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 800px;
     margin: 0 auto;
-    margin-top: 150px;
-    /* background-color: aqua; */
 }
 .parenting-box{
     display: block;
@@ -830,7 +832,6 @@ header{
     border-radius: 5rem 5rem 5rem 0;
     box-shadow: 2px 2px 4px #777;
     margin: 0 auto;
-    margin-bottom: 30px;
 }
 .parenting-box > p{
     position: absolute;
@@ -848,11 +849,15 @@ header{
 
 .tip-box{
     position: relative;
+    position: absolute;
     width: 1100px;
-    height: 90%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     margin: 0 auto;
     bottom: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 .tip-box > .arrowBtn{
     width: 100%;
@@ -863,17 +868,20 @@ header{
 }
 .tips{
     position: relative;
+    position: absolute;
     width: 80%;
-    height: 100%;
+    height: 500px;
     box-sizing: border-box;
-    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .tip{
     position: relative;
     position: absolute;
-    width: 25rem;
-    height: 700px;
+    width: 300px;
+    height: 100%;
     background-color: #fff;
     overflow: hidden;
     box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
@@ -881,7 +889,7 @@ header{
 }
 .tip > img{
     position: absolute;
-    height: 450px;
+    height: 18rem;
     top: 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -889,20 +897,20 @@ header{
 .tip > p:nth-child(2){
     position: absolute;
     font-family: 'SCDream';
-    font-size: 22px;
+    font-size: 1.1rem;
     font-weight: 600;
-    bottom: 160px;
+    bottom:20%;
     left: 50%;
     transform: translateX(-50%);
 }
 .tip > p:nth-child(3){
     position: absolute;
-    width: 80%;
-    bottom: 60px;
+    width: 100%;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'bazzi';
-    font-size: 45px;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -929,12 +937,12 @@ header{
     box-shadow: 2px 2px 6px rgba(0, 0, 0,0.5);
 }
 .tip:nth-child(2){
-    right: 30%;
+    right: 40%;
     transform: scale(75%) rotate(-10deg)translateY(20px);
     z-index: 475;
 }
 .tip:nth-child(3){
-    right: 15%;
+    right: 20%;
     transform: scale(75%) rotate(4deg) translateY(-10px);
     z-index: 450;
 }
