@@ -4,7 +4,19 @@ $(function(){
     function slide1(){$('.Sld1_item').last().prependTo($('.s1_Sld1'))}
     setInterval(slide1, 2000)
 
+    $('.sampleBtn').on({
+        mouseenter : function(){
+        $('.sampleBtn').css({
+            'animation': 'sampleBtnAni 1s forwards'
+        })},
+        mouseleave : function(){
+            $('.sampleBtn').css({
+                'animation': 'sampleBtnRevAni 0.5s forwards'
+            })  
+        }
+    })
 
+    //****************************************섹션2 (section2)
     //섹션2 이미지 슬라이드
 
     //네비게이션(dot)
@@ -58,13 +70,12 @@ $(function(){
 
 
 
-    //***********************섹션2 원형 슬라이드
+    //섹션2 원형 슬라이드
 
     let rotate = 0
     let currentRotate = 0
 
     function rotateCircle(){
-
         if(rotate > 0){
             currentRotate += 120
             $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
@@ -72,10 +83,9 @@ $(function(){
             currentRotate -= 120
             $('.s2_Sld2').css('transform', 'translateX(-50%) rotate('+ currentRotate + 'deg)')
         }
-
     }
 
-    //원형슬라이드의 제목
+    // 원형슬라이드의 제목
     let titleItem = $('.titleItem');
     let titleItemMax = titleItem.length;
 
@@ -95,7 +105,7 @@ $(function(){
 
 
     //왼쪽 버튼 클릭
-    $('.arrowBtn .leftBtn').on('click', function(){
+    $('.section2 .arrowBtn .leftBtn').on('click', function(){
         rotate++
         rotateCircle()          //원형슬라이드 회전(시계방향)
         rotate = 0
@@ -105,7 +115,7 @@ $(function(){
         
     });
     //오른쪽 버튼 클릭
-    $('.arrowBtn .rightBtn').on('click', function(){
+    $('.section2 .arrowBtn .rightBtn').on('click', function(){
         rotate--
         rotateCircle()          //원형슬라이드 회전(반시계방향)
         rotate = 0
@@ -117,9 +127,43 @@ $(function(){
 
     
     
+    //****************************************섹션4 (section4) 
+    //육아꿀팁 대방출 슬라이드
+
+    let tipLbtn = $('.tip-box .arrowBtn .leftBtn')
+    let tipRbtn = $('.tip-box .arrowBtn .rightBtn')
+    let tips = $('.tips')
+    let tip = $('.tip')
+    let tipClick = 0
+    
+    //팁 움직이는 코드
+    function tipRotate(){
+        if(tipClick>0){
+            tips.find($('.tip').first()).appendTo(tips)
+        }else{
+            tips.find($('.tip').last()).prependTo(tips)
+        }
+        tipClick = 0
+        tip.delay(300).animate({'top': '0px', 'opacity':'1'}, 300)
+    }
 
 
+    //왼쪽 버튼 클릭
+    tipLbtn.on('click', function(){
+        tipClick++
+        tip.stop().animate({'top': '-10px', 'opacity':'0'}, 300)
+        setTimeout(tipRotate, 300)
+        
+    });
+    //오른쪽 버튼 클릭
+    tipRbtn.on('click', function(){
+        tipClick--
+        tip.stop().animate({'top': '-10px', 'opacity':'0'}, 300)
+        setTimeout(tipRotate, 300)         
+        tipClick = 0
+    });
 
+    
 
 
 

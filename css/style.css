@@ -214,7 +214,7 @@ header{
     font-weight: 300;
     margin-left: 20px;
     margin-bottom: 18px;
-    animation: titleAni 1s 0.2s both ease-in-out;
+    animation: titleAni 1s 0.2s forwards ease-in-out;
 }
 .subTitle > img{
     position: absolute;
@@ -237,14 +237,41 @@ header{
     width: 350px;
     height: 90px;
     margin-left: 20px;
-    border-radius: 25px;
+    border-radius: 1rem;
     bottom: 0;
-    animation: titleAni 1s 0.4s both ease-in-out;
+    animation: titleAni 1s 0.4s forwards ease-in-out;
+    cursor: pointer;
+}
+.sampleBtn:hover{
+    background-color: rgb(255, 166, 0);
+    box-shadow: 1px 1px 6px rgba(255, 255, 255,0.5);
+}
+.sampleBtn:hover > p{
+    color: rgb(255, 255, 255) !important;
 }
 .sampleBtn > p{
-    font-size: 25px;
+    font-family: 'bazzi';
+    font-size: 2rem;
     text-align: center;
-    padding-top: 25px;
+    line-height: 2.8;
+    color: rgb(63, 48, 48);
+}
+@keyframes sampleBtnAni{
+    0%{bottom: 0;
+        transform: rotate(0deg);}
+    50%{bottom: 10px;
+    transform: rotate(0deg);}
+    60%{transform: rotate(2deg);}
+    70%{transform: rotate(-2deg);}
+    80%{transform: rotate(2deg);}
+    90%{transform: rotate(-2deg);}
+    100%{bottom: 10px;
+        transform: rotate(0deg);}
+}
+
+@keyframes sampleBtnRevAni{
+    0%{bottom: 10px;}
+    100%{bottom: 0;}
 }
 
 .s1_Sld2{
@@ -870,10 +897,25 @@ header{
 .tip-box > .arrowBtn{
     width: 100%;
     left: 50%;
-    top: 300px;
+    top: 50%;
     z-index: 600;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
 }
+.tip-box > .arrowBtn > div{
+    width: 80px;
+    height: 80px;
+}
+.tip-box > .arrowBtn > .leftBtn:hover{background-color: rgb(255, 218, 97);
+    border: 1px solid rgb(255, 224, 166);}
+.tip-box > .arrowBtn > .rightBtn:hover{background-color: rgb(255, 218, 97);
+    border: 1px solid rgb(255, 224, 166);}
+
+.tip-box > .arrowBtn > .arrowBtn > div:hover > .arrow{
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+}
+
+
 .tips{
     position: relative;
     position: absolute;
@@ -894,6 +936,7 @@ header{
     overflow: hidden;
     box-shadow: 4px 4px 6px rgba(0, 0, 0,0.2);
     cursor: pointer;
+    top: 0;
 }
 .tip > img{
     position: absolute;
