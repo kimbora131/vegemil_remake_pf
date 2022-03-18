@@ -1,23 +1,28 @@
 $(function(){
-
+//****************************************섹션1 (section1)
     //섹션1 텍스트 슬라이드
     function slide1(){$('.Sld1_item').last().prependTo($('.s1_Sld1'))}
     setInterval(slide1, 2000)
 
-    $('.sampleBtn').on({
+        $('.sampleBtn').on({
         mouseenter : function(){
-        $('.sampleBtn').css({
-            'animation': 'sampleBtnAni 1s forwards'
-        })},
+            if(winWidth > 500){
+                $('.sampleBtn').css({
+                    'animation': 'sampleBtnAni 1s forwards'
+                })
+            }
+        },
         mouseleave : function(){
-            $('.sampleBtn').css({
-                'animation': 'sampleBtnRevAni 0.5s forwards'
-            })  
+            if(winWidth > 500){
+                $('.sampleBtn').css({
+                    'animation': 'sampleBtnRevAni 0.5s forwards'
+                })
+            }  
         }
     })
 
-    //****************************************섹션2 (section2)
-    //섹션2 이미지 슬라이드
+    
+    //섹션1 이미지 슬라이드
 
     //네비게이션(dot)
     let Sld2item = $('.Sld2_item')
@@ -52,6 +57,8 @@ $(function(){
     })
 
 
+
+//****************************************섹션2 (section2)     
     $(window).scroll(function(){
         let top = $(this).scrollTop()
         
@@ -66,6 +73,7 @@ $(function(){
         }else{
             $('.photo').removeClass('photoSlide')
         }
+
     })
 
 
@@ -107,7 +115,11 @@ $(function(){
     //왼쪽 버튼 클릭
     $('.section2 .arrowBtn .leftBtn').on('click', function(){
         rotate++
-        rotateCircle()          //원형슬라이드 회전(시계방향)
+        if(winWidth < 500){
+            $('.moCircleSlide img').first().appendTo($('.moCircleSlide'))
+        }else{
+            rotateCircle()          //원형슬라이드 회전(시계방향)
+        }
         rotate = 0
 
         titleNum--
@@ -117,7 +129,11 @@ $(function(){
     //오른쪽 버튼 클릭
     $('.section2 .arrowBtn .rightBtn').on('click', function(){
         rotate--
-        rotateCircle()          //원형슬라이드 회전(반시계방향)
+        if(winWidth < 500){
+            $('.moCircleSlide img').last().prependTo($('.moCircleSlide'))
+        }else{
+            rotateCircle()          //원형슬라이드 회전(시계방향)
+        }
         rotate = 0
 
         titleNum++
@@ -166,5 +182,44 @@ $(function(){
     
 
 
+//반응형 윈도우 가로 사이즈 감지
+    let winWidth = $(window).width()
+    let header = $('header')
+    let moLogo = '<div class="logo"><img src="img/logo.gif" alt="logo"></div>'
+    let moHamberger = '<div class="hamberger"><span></span><span></span><span></span></div>'
 
+    let N = 1
+
+    if(winWidth < 500){
+        //모바일 상단 로고
+        header.prepend(moLogo)
+
+        
+        //이미지 슬라이드 갯수만큼 새로 넣어주기
+        for(let i = 0 ; i < 3; i++){
+            let moCircleImg = '<img src="img/step0'+ N +'.jpg" alt="모바일 원형 슬라이드">'
+            $('.moCircleSlide').prepend(moCircleImg)
+            N++
+        }
+        
+
+        let moCircleSlide = $('.moCircleSlide')
+        //왼쪽 버튼 클릭
+        $('.section2 .arrowBtn .leftBtn').on('click', function(){
+            $('.moCircleSlide > img').first().prependTo($('.moCircleSlide'))
+
+        });
+        //오른쪽 버튼 클릭
+        $('.section2 .arrowBtn .rightBtn').on('click', function(){
+
+
+
+        });
+
+
+
+    }
+    // console.log(winWidth)
+    
+    
 })
