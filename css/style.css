@@ -1230,7 +1230,6 @@ footer > p:nth-child(3) >span{
         position: absolute;
         top: auto;
         bottom: 10%;
-        font-size: 1rem;
         animation: none;
         width: 100%;
         height: 100px;
@@ -1239,20 +1238,21 @@ footer > p:nth-child(3) >span{
         padding: 5px 0;
     }
     .subTitle > p{
-        font-size: 1rem;
-        line-height: 1.2;
+        font-size: 0.8rem;
+        line-height: 1.5;
         width: 100%;
         left: 50%;
-        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%,-50%);
         color: #333;
         /* background-color: aqua; */
     }
     .subTitle > p > span{
         font-family: 'Bazzi';
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         color: #000;
     }
-    .subTitle > img{margin-left: 40px; margin-top: 5px;width: 20px;} 
+    .subTitle > img{margin-left: 30px; margin-top: 15px;width: 20px;} 
 
     .sampleBtn{
         background-color: rgb(215, 235, 232);
@@ -1352,6 +1352,24 @@ footer > p:nth-child(3) >span{
     background-color: rgba(255, 255, 255, 0.7);
     right: 50%
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
