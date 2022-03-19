@@ -201,23 +201,6 @@ $(function(){
             $('.moCircleSlide').prepend(moCircleImg)
             N++
         }
-        
-
-        let moCircleSlide = $('.moCircleSlide')
-        //왼쪽 버튼 클릭
-        $('.section2 .arrowBtn .leftBtn').on('click', function(){
-            $('.moCircleSlide > img').first().prependTo($('.moCircleSlide'))
-
-        });
-        //오른쪽 버튼 클릭
-        $('.section2 .arrowBtn .rightBtn').on('click', function(){
-
-
-
-        });
-
-
-
     }
     // console.log(winWidth)
     

@@ -1132,7 +1132,7 @@ footer > p:nth-child(3) >span{
         background-color: rgb(255, 211, 91);
         margin: 0;
     }
-    header .logo{
+    header > .logo{
         position: relative;
         display: block;
         width: 100%;
@@ -1157,13 +1157,13 @@ footer > p:nth-child(3) >span{
         transform: translateY(0%);
         box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
     }
-    .header1 .logo{
+    .header1 > .logo{
         display: none;
     }
     .h_item{
         font-family: 'SCDream';
         font-weight: 500;
-        font-size: 1rem;
+        font-size: 0.8rem;
         margin: auto auto;
         text-transform: uppercase;
         color: #fff;
@@ -1266,11 +1266,15 @@ footer > p:nth-child(3) >span{
         margin: 0;
     }
     .sampleBtn > p{
+        position: absolute;
         font-family: 'SCDream';
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 0.8rem;
         text-align: center;
         color: rgb(0, 0, 0);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
     }
     .sampleBtn:hover{
         background-color: rgb(52, 136, 108);
@@ -1284,7 +1288,7 @@ footer > p:nth-child(3) >span{
     .section2 .content{display: none;}
     .cover {display: none;}
     .back {display: none;}
-    .arrowBtn{top: 350px;}
+    .arrowBtn{top: auto; bottom: 0;}
     .arrowBtn > div{
         background-color: rgba(0, 0, 0, 0);
         width: 50px;
@@ -1336,7 +1340,7 @@ footer > p:nth-child(3) >span{
     margin-bottom: 1rem;
 }
 .goto > div > a{
-    font-size: 0.8rem;
+    font-size: 0.5rem;
     padding: 5px 5px;
     transition: none;
 }
