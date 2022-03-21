@@ -68,11 +68,16 @@ $(function(){
             $('.section2 .content .title').css('animation', 'titleUp 1s both ease-out');
         }
 
-        if(top>1850){
-            $('.photo').addClass('photoSlide')
+        if(winWidth > 500){
+            if(top>1850){
+                $('.photo').addClass('photoSlide')
+            }else{
+                $('.photo').removeClass('photoSlide')
+            }
         }else{
-            $('.photo').removeClass('photoSlide')
+            $('.photo').css('display','block');
         }
+        
 
     })
 

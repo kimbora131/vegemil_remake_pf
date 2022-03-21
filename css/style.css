@@ -1361,15 +1361,127 @@ footer > p:nth-child(3) >span{
 
 
 
+/* ********************************모바일 섹션4(mobile section4)********************* */
+.section4{
+    background: none;
+    background-color: #fff;
+    /* width: 100vw; */
+    /* height: 2000px; */
+}
+/* ***************************베스트 리뷰 */
+.best-review{
+    height: 50%;
+}
+.best-box{
+    width: 230px;
+    height: 70px;
+    margin: 0;
+    margin-left: 1rem;
+    top: 0;
+}
+.best-box > p{
+    font-size: 1.5rem;
+    color: rgb(199, 79, 79);
+}
+.thanks{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    /* background-color: #777; */
+    left: auto;
+    transform: translateX(0);
+}
+.photos{
+    width: 100%;
+    height: 50%;
+    /* gap: 0px; */
+    position: absolute;
+    top: 0;
+}
+.photo > img{
+    width: 100%;
+}
+.photo > .review{
+    height: 50px;
+    font-size: 0.7rem !important;
+    line-height: 1rem;
+}
+.photo > .review > p:nth-child(2){ display: none; }
 
 
+.thanksText{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+}
+.thanksText > p{
+    /* background-color: #333; */
+    width: 100%;
+    margin: 0;
+    top: 0;
+    transform: translateY(0);
+    font-size: 5rem;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.thanksText > img{
+    bottom: 0;
+    /* background-color: aqua; */
+}
 
 
+/* ***************************육아꿀팁 대방출 */
+.parenting{
+    height: 30%;
+    background-color: antiquewhite;
+}
+.parenting-box{
+    width: 230px;
+    height: 70px;
+    margin: 0;
+    margin-left: 1rem;
+    top: 0;
+}
+.parenting-box > p{
+    font-size: 1.5rem;
+}
+.tip-box{
+    width: 100%;
+    height: 85% !important;
+    /* background-color: #555; */
+    height: 50%;
+    left: 0;
+    bottom: 0;
+    transform: translateX(0);
+}
+.tip-box > .arrowBtn{
+    height: 50px;
+}
+.tip-box > .arrowBtn > div{
+    width: 50px;
+    height: 50px;
+}
 
-
-
-
-
+.tips{
+    background-color: #333;
+    width: 200%;
+    height: 100%;
+    top: 30%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+}
+.tip:first-child, .tip:nth-child(2), .tip:nth-child(3), .tip:nth-child(4){
+    z-index: inherit;
+    transform: none;
+    right: auto;
+    left: auto;
+}
+.tip{
+    width: 150px;
+}
 
 
 
