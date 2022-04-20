@@ -192,9 +192,6 @@ $(function(){
     let N = 1
 
     if(winWidth < 500){
-        //모바일 상단 로고
-        $('header').prepend(moLogo)
-
         
         //이미지 슬라이드 갯수만큼 새로 넣어주기
         for(let i = 0 ; i < 3; i++){
@@ -204,6 +201,7 @@ $(function(){
         }
     }
     // console.log(winWidth)
+    
     
     
 })
