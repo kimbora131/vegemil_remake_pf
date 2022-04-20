@@ -301,6 +301,16 @@ header .logo{display: none;}
     /* opacity: 1; */
     animation: slideMoveIn 1s forwards;
 }
+
+@keyframes slideMoveIn{
+    0%{transform: translateX(50%); opacity: 0;}
+    100%{transform: translateX(-50%); opacity: 1;}
+}
+@keyframes slideMoveOut{
+    0%{transform: translateX(-50%); opacity: 1;}
+    100%{transform: translateX(-150%); opacity: 0;}
+}
+
 .dots-Box{
     width: 100%;
     height: 30px;
@@ -1105,14 +1115,7 @@ footer > p:nth-child(3) >span{
     100%{top: 0; opacity: 1;}
 }
 
-@keyframes slideMoveIn{
-    0%{transform: translateX(50%);}
-    100%{transform: translateX(-50%);}
-}
-@keyframes slideMoveOut{
-    0%{transform: translateX(-50%);}
-    100%{transform: translateX(-150%);}
-}
+
 
 @keyframes photpUp{
     0%{transform: translateY(0);}
@@ -1122,7 +1125,7 @@ footer > p:nth-child(3) >span{
 
 
 
-/* ***********************************모바일 반응형 (갤럭시S8+기준)************************************* */
+/* ***********************************모바일 반응형************************************* */
 @media (max-width:500px){
     body{background-color: #fff; width: 100%;}
     
@@ -1193,9 +1196,9 @@ footer > p:nth-child(3) >span{
         padding-top: 0px;
     }
     .s1_Sld2 {width: 100%; height: 40%; margin-top: 100px;}
+    .slide > img {background-size: cover; bottom: -25px;}
     .Sld2_item{
-        width: auto;
-        height: 100%;
+        height: auto;
     }
     .dots-Box{
         bottom: -15%;
@@ -1360,6 +1363,52 @@ footer > p:nth-child(3) >span{
 }
 
 
+
+/* *******************모바일 섹션4(mobile section4)************ */
+.section4{
+    background: none;
+    padding-top: 100px;
+}
+.best-box{
+    width: 95%;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 206, 206); 
+    box-shadow: none;
+}
+.best-box > p{
+    color: rgb(196, 62, 62);
+    top: 0;
+}
+.best-box > p > span{color: rgb(212, 109, 109); font-weight: 600;}
+.thanks{
+    width: 100%;
+    height: 800px;
+    /* background-color: #333; */
+}
+.photos{
+    width: 100%;
+    height: 65%;
+    bottom: 0;
+}
+.review > p{
+    font-size: 12px;
+}
+.thanksText{
+    width: 100%;
+    height: 35%;
+    right: auto;
+    top: 0;
+
+}
+.thanksText > p{
+    font-size: 3rem;
+    text-align: center;
+    top: 0;
+    transform: translateY(0%);
+    width: 100%;
+    margin-left: 0;
+}
 
 
 

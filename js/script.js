@@ -68,7 +68,7 @@ $(function(){
             $('.section2 .content .title').css('animation', 'titleUp 1s both ease-out');
         }
 
-        if(top>1850){
+        if(top>1250){
             $('.photo').addClass('photoSlide')
         }else{
             $('.photo').removeClass('photoSlide')
@@ -192,7 +192,7 @@ $(function(){
 
     if(winWidth < 500){
         //모바일 상단 로고
-        header.prepend(moLogo)
+        $('header').prepend(moLogo)
 
         
         //이미지 슬라이드 갯수만큼 새로 넣어주기
