@@ -71,8 +71,9 @@ $(function(){
         if(top>1250){
             $('.photo').addClass('photoSlide')
         }else{
-            $('.photo').removeClass('photoSlide')
+            $('.photo').css('display','block');
         }
+        
 
     })
 
