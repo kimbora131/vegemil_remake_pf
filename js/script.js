@@ -21,7 +21,7 @@ $(function(){
         }
     })
 
-    
+    let winWidth = $(window).width()
     //섹션1 이미지 슬라이드
 
     //네비게이션(dot)
@@ -112,36 +112,26 @@ $(function(){
     addACtive()
 
 
-
     //왼쪽 버튼 클릭
     $('.section2 .arrowBtn .leftBtn').on('click', function(){
         rotate++
-        if(winWidth < 500){
-            $('.moCircleSlide img').first().appendTo($('.moCircleSlide'))
-        }else{
-            rotateCircle()          //원형슬라이드 회전(시계방향)
-        }
+        rotateCircle()          //원형슬라이드 회전(시계방향)
+        $('.moCircleSlide img').first().appendTo($('.moCircleSlide'))
         rotate = 0
-
         titleNum--
         addACtive()
-        
     });
     //오른쪽 버튼 클릭
     $('.section2 .arrowBtn .rightBtn').on('click', function(){
         rotate--
-        if(winWidth < 500){
-            $('.moCircleSlide img').last().prependTo($('.moCircleSlide'))
-        }else{
-            rotateCircle()          //원형슬라이드 회전(시계방향)
-        }
+        rotateCircle()          //원형슬라이드 회전(시계방향)
+        $('.moCircleSlide img').last().prependTo($('.moCircleSlide'))
         rotate = 0
-
         titleNum++
         addACtive()
-        
     });
 
+    
     
     
     //****************************************섹션4 (section4) 
@@ -182,25 +172,6 @@ $(function(){
 
     
 
-
-//반응형 윈도우 가로 사이즈 감지
-    let winWidth = $(window).width()
-    let header = $('header')
-    let moLogo = '<div class="logo"><img src="img/logo.gif" alt="logo"></div>'
-    let moHamberger = '<div class="hamberger"><span></span><span></span><span></span></div>'
-
-    let N = 1
-
-    if(winWidth < 500){
-        
-        //이미지 슬라이드 갯수만큼 새로 넣어주기
-        for(let i = 0 ; i < 3; i++){
-            let moCircleImg = '<img src="img/step0'+ N +'.jpg" alt="모바일 원형 슬라이드">'
-            $('.moCircleSlide').prepend(moCircleImg)
-            N++
-        }
-    }
-    // console.log(winWidth)
     
     
     
