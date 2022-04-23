@@ -115,8 +115,8 @@ $(function(){
     //왼쪽 버튼 클릭
     $('.section2 .arrowBtn .leftBtn').on('click', function(){
         rotate++
-        rotateCircle()          //원형슬라이드 회전(시계방향)
-        $('.moCircleSlide img').first().appendTo($('.moCircleSlide'))
+        rotateCircle()                  //원형슬라이드 회전(PC화면)
+        $('.moCircleSlide img').first().appendTo($('.moCircleSlide'))   //모바일 화면
         rotate = 0
         titleNum--
         addACtive()
@@ -124,8 +124,8 @@ $(function(){
     //오른쪽 버튼 클릭
     $('.section2 .arrowBtn .rightBtn').on('click', function(){
         rotate--
-        rotateCircle()          //원형슬라이드 회전(시계방향)
-        $('.moCircleSlide img').last().prependTo($('.moCircleSlide'))
+        rotateCircle()                  //원형슬라이드 회전(PC화면)
+        $('.moCircleSlide img').last().prependTo($('.moCircleSlide'))   //모바일 화면
         rotate = 0
         titleNum++
         addACtive()
@@ -142,36 +142,35 @@ $(function(){
     let tips = $('.tips')
     let tip = $('.tip')
     let tipClick = 0
-    
-    //팁 움직이는 코드
-    function tipRotate(){
-        if(tipClick>0){
-            tips.find($('.tip').first()).appendTo(tips)
-        }else{
-            tips.find($('.tip').last()).prependTo(tips)
+   
+        //팁 움직이는 코드
+        function tipRotate(){
+            if(tipClick>0){
+                tips.find($('.tip').first()).appendTo(tips)
+            }else{
+                tips.find($('.tip').last()).prependTo(tips)
+            }
+            tipClick = 0
+            tip.animate({'opacity':'1'}, 300)
         }
-        tipClick = 0
-        tip.delay(300).animate({'top': '0px', 'opacity':'1'}, 300)
-    }
+        //왼쪽 버튼 클릭
+        tipLbtn.on('click', function(){
+            tipClick++
+            tip.stop().animate({'opacity':'0'}, 300)
+            setTimeout(tipRotate, 300)
+        });
 
-
-    //왼쪽 버튼 클릭
-    tipLbtn.on('click', function(){
-        tipClick++
-        tip.stop().animate({'top': '-10px', 'opacity':'0'}, 300)
-        setTimeout(tipRotate, 300)
-        
-    });
-    //오른쪽 버튼 클릭
-    tipRbtn.on('click', function(){
-        tipClick--
-        tip.stop().animate({'top': '-10px', 'opacity':'0'}, 300)
-        setTimeout(tipRotate, 300)         
-        tipClick = 0
-    });
-
+        //오른쪽 버튼 클릭
+        tipRbtn.on('click', function(){
+            tipClick--
+            tip.stop().animate({'opacity':'0'}, 300)
+            setTimeout(tipRotate, 300)         
+            tipClick = 0
+        });
     
 
+    
+    // if(winWidth<500){}
     
     
     

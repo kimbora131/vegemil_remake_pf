@@ -978,6 +978,7 @@ header .logo{display: none;}
     left: 50%;
     transform: translateX(-50%);
 }
+.tip > p{width: 50%; text-align: center;}
 .tip > p:nth-child(2){
     position: absolute;
     font-family: 'SCDream';
@@ -1364,6 +1365,7 @@ footer > p:nth-child(3) >span{
 .section4{
     background: none;
     padding-top: 100px;
+    height: 1760px;
 }
 .best-box{
     width: 95%;
@@ -1387,6 +1389,7 @@ footer > p:nth-child(3) >span{
     height: 65%;
     bottom: 0;
 }
+.photo{animation: none !important;}
 .review > p{
     font-size: 12px;
 }
@@ -1416,14 +1419,19 @@ footer > p:nth-child(3) >span{
     /* background-color: antiquewhite; */
 }
 .parenting-box{
-    width: 230px;
-    height: 70px;
-    margin: 0;
-    margin-left: 1rem;
-    top: 0;
+    width: 95%;
+    height: 25px;
+    border-radius: 10px;
+    background-color: rgb(255, 214, 180); 
+    box-shadow: none;
+    top: 40px;
 }
 .parenting-box > p{
-    font-size: 1.5rem;
+    color: rgb(223, 118, 70);
+    top: 0;
+}
+.parenting-box > p > span{
+    color: rgb(235, 143, 91); font-weight: 600;
 }
 .tip-box{
     width: 100%;
@@ -1438,14 +1446,15 @@ footer > p:nth-child(3) >span{
     height: 50px;
 }
 .tip-box > .arrowBtn > div{
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 100%;
+    border: none;
 }
 
 .tips{
     /* background-color: #333; */
     width: 100%;
-    height: 100%;
+    height: 90%;
     bottom: 0 !important;
     left: 0;
     transform: translate(0%, -50%);
@@ -1458,9 +1467,11 @@ footer > p:nth-child(3) >span{
     left: auto;
     display: none;
 }
+.tip > p:nth-child(2) {bottom: 17%;}
+.tip > p:nth-child(3) {font-size: 1.6rem; bottom: 7%;}
 .tip:first-child{
     display: block;
-    width: 60%;
+    width: 50%;
     height: 90%;
     left: 50% !important;
     top: 50%;
@@ -1469,21 +1480,23 @@ footer > p:nth-child(3) >span{
 .tip:nth-child(2){
     display: block;
     height: 80%;
-    width: 60%;
-    right: 30px;
+    width: 50%;
+    right: 60px;
     top: 50%;
     transform: translateY(-50%) !important;
-    opacity: 0.5;
+    opacity: 0.5 !important;
 }
 .tip:last-child{
     display: block;
     height: 80%;
-    width: 60%;
-    left: 30px;
+    width: 50%;
+    left: 60px;
     top: 50%;
     transform: translateY(-50%) !important;
-    opacity: 0.5;
+    opacity: 0.5 !important;
 }
+.tip:nth-child(2) > p, .tip:last-child > p {font-size: 1rem;}
+
 .tip > img{top: 0;}
 
 
@@ -1498,42 +1511,40 @@ footer > p:nth-child(3) >span{
 /* ********************************모바일 푸터(mobile footer)********************* */
 footer{
     display: block;
-    height: 150px;
-    padding: 15px;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
 }
 footer > img{
-    display: inline-block;
-    transform: scale(50%);
+    display: block;
+    width: 70px;
+    height: auto;
     margin: 0;
+    padding-left: 3%;
 }
 footer > p{
-    display: inline-block;
-    font-size: 0.1rem;
+    position: absolute;
+    font-size: 0.8rem;
 }
-footer > div{
-    display: inline-block;
+footer > p:nth-child(2){
+    top: 10%;
+    left: 28%;
 }
 footer > p:nth-child(3){
-    transform: translateY(0px);
+    top: 45%;
+    left: 28%;
 }
 footer > p:nth-child(3) >span{
     font-size: inherit;
     font-weight: 500;
 }
 footer > p:nth-child(4){
-    margin-top: 10px;
-    transform: translateX(95px);
+    top: 70%;
+    left: 28%;
 }
 .familySite{
-    display: block;
-    width: 150px;
-    height: 30px;
-    padding: 2px;
-    letter-spacing: -1px;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 10px;
-    transform: translateX(70px);
+    display: none;
 }
 
 
