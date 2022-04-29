@@ -1170,8 +1170,8 @@ footer > p:nth-child(3) >span{
         padding-top: 60px;
     }
     .h_item:hover{
-        font-weight: 800;
-        color: rgb(117, 82, 66);
+        /* font-weight: 800; */
+        color: rgb(172, 86, 46);
     }
     .h_item:hover > div{display: none;}
     .h_item:hover::before{display: none;}
@@ -1389,7 +1389,7 @@ footer > p:nth-child(3) >span{
     height: 65%;
     bottom: 0;
 }
-.photo{animation: none !important;}
+.photo{animation: none !important; display: block;}
 .review > p{
     font-size: 12px;
 }
@@ -1484,7 +1484,7 @@ footer > p:nth-child(3) >span{
     right: 60px;
     top: 50%;
     transform: translateY(-50%) !important;
-    opacity: 0.5 !important;
+    opacity: 0.5;
 }
 .tip:last-child{
     display: block;
@@ -1493,11 +1493,11 @@ footer > p:nth-child(3) >span{
     left: 60px;
     top: 50%;
     transform: translateY(-50%) !important;
-    opacity: 0.5 !important;
+    opacity: 0.5;
 }
 .tip:nth-child(2) > p, .tip:last-child > p {font-size: 1rem;}
 
-.tip > img{top: 0;}
+.tip > img{top: 0; height: 60%;}
 
 
 .tip-more {

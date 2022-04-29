@@ -68,9 +68,9 @@ $(function(){
             $('.section2 .content .title').css('animation', 'titleUp 1s both ease-out');
         }
 
-        if(top>1250){
-            $('.photo').addClass('photoSlide')
-        }else{
+        //섹션4 베스트 리뷰 포토 애니메이션
+        if(top>1650){
+            $('.photo').addClass('photoSlide'),
             $('.photo').css('display','block');
         }
         
@@ -143,6 +143,11 @@ $(function(){
     let tip = $('.tip')
     let tipClick = 0
    
+    // $(window).resize(function (){
+    //     if (winWidth > 500) {        }
+    //   })
+
+
         //팁 움직이는 코드
         function tipRotate(){
             if(tipClick>0){
@@ -151,19 +156,24 @@ $(function(){
                 tips.find($('.tip').last()).prependTo(tips)
             }
             tipClick = 0
-            tip.animate({'opacity':'1'}, 300)
+            let clickWinWidth = window.innerWidth
+            if(clickWinWidth>500){tip.animate({'opacity':'1'}, 300)}
+            
         }
         //왼쪽 버튼 클릭
         tipLbtn.on('click', function(){
             tipClick++
-            tip.stop().animate({'opacity':'0'}, 300)
+            let clickWinWidth = window.innerWidth
+            if(clickWinWidth>500){tip.animate({'opacity':'0'}, 300)}
             setTimeout(tipRotate, 300)
         });
 
         //오른쪽 버튼 클릭
         tipRbtn.on('click', function(){
             tipClick--
-            tip.stop().animate({'opacity':'0'}, 300)
+            let clickWinWidth = window.innerWidth
+            if(clickWinWidth>500){tip.animate({'opacity':'0'}, 300)}
+            
             setTimeout(tipRotate, 300)         
             tipClick = 0
         });
