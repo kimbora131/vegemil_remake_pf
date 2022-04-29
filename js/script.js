@@ -1,4 +1,6 @@
 $(function(){
+
+
 //****************************************섹션1 (section1)
     //섹션1 텍스트 슬라이드
     function slide1(){$('.Sld1_item').last().prependTo($('.s1_Sld1'))}
@@ -21,9 +23,9 @@ $(function(){
         }
     })
 
-    let winWidth = $(window).width()
+   
     //섹션1 이미지 슬라이드
-
+    let winWidth = $(window).width()
     //네비게이션(dot)
     let Sld2item = $('.Sld2_item')
     let Sld2itemCount = Sld2item.length
