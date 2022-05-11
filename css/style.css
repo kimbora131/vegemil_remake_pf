@@ -2,7 +2,7 @@ body,header,section,footer,div,p,a,h1,h2,h3,h4,h5,h6,ul,ol,li,span{margin: 0;pad
 a{text-decoration: none; color: inherit;}
 li{list-style: none;}
 
-body{background-color: rgb(255, 245, 213); width: 100%;}
+body{background-color: rgb(255, 245, 213); width: 100%; overflow: hidden;}
 
 /* 본문 시작 */
 
@@ -89,7 +89,8 @@ header .logo{display: none;}
 
     box-sizing: border-box;
 }
-.header2 > .hamberger{
+.header2 > .hamberger {display: none;}
+.header2 >  .hambergerImg{
     display: none;
     cursor: pointer;
     position: absolute;
@@ -1128,6 +1129,15 @@ footer > p:nth-child(3) >span{
 .familySite > ul > li:hover{
     background-color: #eee;
 }
+
+
+
+
+
+
+
+
+
 /* ************************ 애니메이션 목록 ************************* */
 
 @keyframes colorBoxUp{
@@ -1154,9 +1164,50 @@ footer > p:nth-child(3) >span{
     0%{transform: translateY(0);}
     100%{transform: translateY(-10%);}
 }
+
+
+
+
+
+
+
+
+
 /* **********************************960px 이하 헤더 반응형 *************************************** */
 @media (max-width:960px){
-    .header2 > .hamberger {display: block;}
+    
+    .header2 > .hambergerImg {display: block; cursor: pointer;}
+    .header2 > .hambergerImg:hover + .hamberger {
+        display: block;
+        width: 180px;
+        top: 100%;
+        right: 0;
+        position: absolute;
+        /* padding-top: 30%; */
+    }
+    .header2 > .hamberger > .point{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background-color: rgb(201, 177, 166);
+        right: 20%;
+        z-index: -1;
+        transform: rotateZ(36deg) rotateX(30deg) rotateY(30deg) translateY(-70%);
+    }
+    .header2 > .hamberger > li {
+        background-color: #fff;
+        height: 60px;
+        font-size: 1.3rem;
+        text-align: center;
+        line-height: 2.8;
+        z-index: 200;
+    }
+    .header2 > .hamberger > li:hover{
+        background-color: rgb(237, 237, 237);
+        z-index: 200;
+        font-weight: 800;
+        display: block;
+    }
 }
 
 /* **********************************1275px 이하 헤더 반응형 *************************************** */
@@ -1178,6 +1229,15 @@ footer > p:nth-child(3) >span{
     }
     .header2 > .h2_etc{display: none;}
 }
+
+
+
+
+
+
+
+
+
 
 /* ***********************************500px 모바일 반응형************************************* */
 @media (max-width:500px){
