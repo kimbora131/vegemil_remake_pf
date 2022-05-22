@@ -534,7 +534,7 @@ header .logo{display: none;}
     position: absolute;
     top: 700px;
     left: 150px;
-    transform: scale(1.2%);
+    transform: scale(1.2);
     animation: bean1 2.5s infinite;
 }
 .cover .bean2{
