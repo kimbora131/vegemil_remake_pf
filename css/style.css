@@ -534,7 +534,7 @@ header .logo{display: none;}
     position: absolute;
     top: 700px;
     left: 150px;
-    transform: scale(120%);
+    transform: scale(1.2%);
     animation: bean1 2.5s infinite;
 }
 .cover .bean2{
@@ -1039,17 +1039,17 @@ header .logo{display: none;}
 }
 .tip:nth-child(2){
     right: 40%;
-    transform: scale(75%) rotate(-10deg) translateY(20px);
+    transform: scale(0.75) rotate(-10deg) translateY(20px);
     z-index: 475;
 }
 .tip:nth-child(3){
     right: 20%;
-    transform: scale(75%) rotate(4deg) translateY(-10px);
+    transform: scale(0.75) rotate(4deg) translateY(-10px);
     z-index: 450;
 }
 .tip:nth-child(4){
     right: 0;
-    transform: scale(75%) rotate(-5deg) translateY(15px);
+    transform: scale(0.75) rotate(-5deg) translateY(15px);
     z-index: 425;
 }
 
@@ -1074,7 +1074,7 @@ footer{
 footer > img{
     width: 91px;
     height: 54px;
-    transform: translateY(13px) scale(120%);
+    transform: translateY(13px) scale(1.2);
     margin: 0 60px;
 }
 footer > p {
@@ -1112,7 +1112,7 @@ footer > p:nth-child(3) >span{
     background-color: #ddd;
 }
 .familySite > img{
-    transform: translateY(1.5px) scale(95%);
+    transform: translateY(1.5px) scale(0.95);
 }
 
 .familySite > ul {
@@ -1433,7 +1433,7 @@ footer > p:nth-child(3) >span{
     transition: none;
 }
 .goto > div > a:hover{
-    background-color: none;
+    background: none;
     transition: none;
 }
 .reEvent::before{
